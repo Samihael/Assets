@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: bba120cc078d13140b22ff27f6ae133f
+timeCreated: 1506583923
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Pixel LCD7
+  fontNames:
+  - Pixel LCD7
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
