@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.92739373, y: 0.03582189}
   m_AnchorMax: {x: 0.96500003, y: 0.08314427}
-  m_AnchoredPosition: {x: 1.2755003, y: -0.04499817}
+  m_AnchoredPosition: {x: 1.2755127, y: -0.04498291}
   m_SizeDelta: {x: 2.5511322, y: 13.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220686545
@@ -1755,7 +1755,7 @@ Prefab:
     - target: {fileID: 114952756381605900, guid: a1d58c49e9a98714d91efff84f103679,
         type: 2}
       propertyPath: MaxSpeed
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114952756381605900, guid: a1d58c49e9a98714d91efff84f103679,
         type: 2}
@@ -1816,7 +1816,12 @@ Prefab:
     - target: {fileID: 61843557209371544, guid: a1d58c49e9a98714d91efff84f103679,
         type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61843557209371544, guid: a1d58c49e9a98714d91efff84f103679,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114342946582974462, guid: a1d58c49e9a98714d91efff84f103679, type: 2}
@@ -2759,7 +2764,6 @@ GameObject:
   - component: {fileID: 1904000923}
   - component: {fileID: 1904000922}
   - component: {fileID: 1904000921}
-  - component: {fileID: 1904000924}
   - component: {fileID: 1904000925}
   m_Layer: 0
   m_Name: GameManager
@@ -2779,7 +2783,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc74ba27fac9ba4448ac122b4d5301aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cupcake: {fileID: 1399971154304084, guid: f53c0899252e3234a8c7096b0ed55c24, type: 2}
+  enemyPrefab: {fileID: 1743182778271822, guid: de169b7c8e4d8504b830b14b9a0d1eab,
+    type: 2}
 --- !u!114 &1904000922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2816,20 +2821,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1904000924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1904000920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20cb7ba4ff0871e4fb3f311fcff63e1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1703885332938974, guid: de169b7c8e4d8504b830b14b9a0d1eab,
-    type: 2}
-  Enemies: []
 --- !u!114 &1904000925
 MonoBehaviour:
   m_ObjectHideFlags: 0

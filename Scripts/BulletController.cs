@@ -6,16 +6,12 @@ public class BulletController : MonoBehaviour {
 
     [SerializeField]
     private float maxspeed;
-    [SerializeField]
-    private float minspeed;
 
     [SerializeField]
     private Vector2 bulletDirection = new Vector2(1,0);
     [SerializeField]
     private BulletFactory.BulletType type;
     private BulletFactory factory;
-    [SerializeField]
-    private BulletFactory.BulletType Type;
     private BulletFactory.BulletType bulletType;
 
     private GameObject player;
@@ -57,7 +53,7 @@ public class BulletController : MonoBehaviour {
             bulletDirection = new Vector2(1, Mathf.Sin(Time.deltaTime * 10000000f));
 
         }
-        transform.Translate(bulletDirection * Random.Range(minspeed,maxspeed) * Time.deltaTime);
+        transform.Translate(bulletDirection *(maxspeed) * Time.deltaTime);
    
 
 

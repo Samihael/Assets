@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-
-    private EnemyFactory enemyFactory;
+    [SerializeField]
+    public GameObject enemyPrefab;
     private CupcakesFactory cupcakeFactory;
-
-    public GameObject cupcake;
 
 
     void Start()
     {
-        enemyFactory = GameObject.Find("GameManager").GetComponent<EnemyFactory>();
         cupcakeFactory = GameObject.Find("GameManager").GetComponent<CupcakesFactory>();
 
         StartCoroutine(EnemySpawner());
@@ -23,12 +20,16 @@ public class Spawner : MonoBehaviour
 
     public IEnumerator EnemySpawner()
     {
+    
         bool flag = true;
         while (flag)
         {
-            enemyFactory.GetEnemy();
-            yield return new WaitForSeconds(Random.Range(0.45f,1.5f));
+            float y = Random.Range(-4, 3.5f);
+            Vector2 position = new Vector2(12, y);
+            Instantiate(enemyPrefab, position, Quaternion.identity);
+            yield return new WaitForSeconds(Random.Range(0.3f, 2));
         }
+
     }
 
     public IEnumerator CupcakeSpawner()
@@ -47,3 +48,4 @@ public class Spawner : MonoBehaviour
 
 
 }
+ 

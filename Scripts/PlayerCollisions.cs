@@ -38,7 +38,7 @@ public class PlayerCollisions : MonoBehaviour {
         else if(collider.gameObject.tag == enemyTag)
         {
             hurtsound.Play();
-            collider.gameObject.GetComponent<AIEnemyBasicEngine>().Die();
+            Destroy(collider.gameObject);
             GetComponent<PlayerAvatar>().lifeBarSlider.value -= .080f;
             Destroy(Instantiate(explosion, new Vector2(x, y), Quaternion.identity), explosionLifeTime);
 

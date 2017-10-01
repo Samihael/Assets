@@ -32,7 +32,7 @@ public class CollisionController : MonoBehaviour
 
             count++;
             player.GetComponent<PlayerAvatar>().Count += count;
-            this.gameObject.GetComponent<AIEnemyBasicEngine>().Die();
+            Destroy(this.gameObject);
             collider.gameObject.GetComponent<BulletController>().Die();
 
             Destroy(Instantiate(explosion, new Vector2(x, y), Quaternion.identity), explosionLifeTime);
